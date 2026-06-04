@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="YuukiC">
+    <meta name="description" content="Project Linear gives you to bring back Windows 8.1 Metro style with modern features.">
+    <meta property="og:title" content="Project Linear" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://project-linear.com"/>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css?display=swap" />
+    <link rel="stylesheet" href="./charms.css">
+    <link rel="stylesheet" href="./start_styles.css">
+    <script defer src="./start.js"></script>
+    <script defer src="./charms.js"></script>
+    <title>Start</title>
+</head>
+<body>
+    <div id="charms-wrapper"></div>
+    <div class="card-overlay">
+        <div class="overlay-header">
+            <div></div>
+            <h1 id="devName"></h1>
+            <div class="actions">
+                <button class="btn">-</button>
+                <button class="btn close-btn">&times;</button>
+            </div>
+        </div>
+    </div>
+    <section class="about-me">
+        <div class="page start active">
+            <div class="header">
+                <h1>Start</h1>
+                <div class="actions-button">
+                    <button class="btn" id="apps"><span class="apps-icon"></span></button>
+                    <button class="btn user" id="user" data-tooltip="Your Account">
+                        <div class="drop-down">
+                            <div class="flex-username">
+                                <p class="firstname">User</p>
+                                <p class="surname"></p>
+                            </div>
+                        </div>
+                        <img class="user-photo" src="../assets/icon/A-Black and White.png" alt="user profile picture" >
+                    </button>
+                    <div class="drop-down">
+                        <button class="btn" data-tooltip="Search"><span class="search-icon"></span></button>
+                    </div>
+                    <button class="btn" id="power" data-tooltip="Power"><span class="settings-icon"></span></button>
+                </div>
+            </div>
+            <div class="taskbar">
+                <button class="btn start-button"><i class="uil uil-windows"></i></button>
+            </div>
+            <div class="flex-grid" id="flex">
+                <div class="column">
+                    <div class="group">
+                        <h1 autocorrect="off" spellcheck="false" contenteditable>Het</h1>
+                        <div class="pseudo-column">
+                            <div class="modern-cards custom vertical-banner" id="about" style="background-color: var(--secondary-color)" onclick="window.location.href='./ms-settings.html#personalize'">
+                                <div class="img">
+                                    <img src="assets/icon/icons8-settings-104.png" style="object-fit: scale-down !important;" class="dev-img active">
+                                </div>
+                                <div class="top-text">
+                                    <div class="dev-name" translate="no">
+                                        PC settings
+                                    </div>
+                                </div>
+                                <div class="bottom-text">
+
+                                </div>
+                            </div>
+                            <div class="modern-cards custom vertical-banner" id="about" style="background-color: red" onclick="window.location.href='http://netflix.com'">
+                                <div class="img">
+                                    <img src="../assets/Original_Netflix_Logo.png" style="object-fit: scale-down !important;" class="dev-img active">
+                                </div>
+                                <div class="top-text">
+                                    <div class="dev-name" translate="no">
+                                        
+                                    </div>
+                                </div>
+                                <div class="bottom-text">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pseudo-column">
+                            <div class="modern-cards custom largetile" id="about" style="background-color: blue" onclick="window.location.href='https://facebook.com'">
+                                <div class="img">
+                                    <img src="../assets/facebook.png" style="object-fit: scale-down !important;" class="dev-img active">
+                                </div>
+                                <div class="top-text">
+                                    <div class="dev-name" translate="no">
+                                        Facebook
+                                    </div>
+                                </div>
+                                <div class="bottom-text">
+        
+                                </div>
+                            </div>
+                            <div class="modern-cards custom largetile" id="about" style="background-color: #8d472c" onclick="window.location.href='./jessica-noleen.html'">
+                                <div class="img">
+                                    <img src="../assets/jessica_noleen.jpg" style="object-fit: scale-down !important;" class="dev-img active">
+                                </div>
+                                <div class="top-text">
+                                    <div class="dev-name" translate="no">
+                                        Jessica Noleen (test)
+                                    </div>
+                                </div>
+                                <div class="bottom-text">
+        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pseudo-column">
+                        </div>
+                        <div class="pseudo-column">
+                            
+                        </div>
+                        <div class="pseudo-column">
+                            
+                        </div>
+                    </div>
+                    <div class="group">
+                        <h1 autocorrect="off" spellcheck="false" contenteditable>Hello</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page apps">
+            <div class="header">
+                <h1>Apps</h1>
+            </div>
+        </div>
+        <div class="contextmenu" id="ctxmenu">
+            <div class="ctx-type tile-ctxmenu">
+                <ul>
+                    <li>
+                        <button class="menuButton sub">Change tile size</button>
+                        <ul class="submenu">
+                            <li><button class="menuButton" id="largeTile">Large</button></li>
+                            <li><button class="menuButton" id="verticalBanner">Vertical banner</button></li>
+                            <li><button class="menuButton" id="normalTile">Medium</button></li>
+                            <li><button class="menuButton" id="wideTile">Wide</button></li>
+                            <li><button class="menuButton" id="horizontalBanner">Horizontal banner</button></li>
+                            <li><button class="menuButton" id="smallTile">Small</button></li>
+                        </ul>
+                    </li>
+                    <li><button class="menuButton sub">Rating this app</button></li>
+                </ul>
+            </div>
+            <div class="ctx-type power">
+                <ul>
+                    <li>
+                        <button class="menuButton sub">Shut down</button>
+                    </li>
+                    <li><button class="menuButton sub">Restart</button></li>
+                </ul>
+            </div>
+            <div class="ctx-type user">
+                <ul>
+                    <li>
+                        <button class="menuButton sub">Change account picture</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

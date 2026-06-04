@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="YuukiC">
+    <meta name="description" content="Project Linear gives you to bring back Windows 8.1 Metro style with modern features.">
+    <meta property="og:title" content="Project Linear" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://project-linear.com"/>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css?display=swap" />
+    <link rel="stylesheet" href="/windows-8/charms.css">
+    <link rel="stylesheet" href="/windows-8/start_styles.css">
+    <link rel="stylesheet" href="./apps_template_styles.css">
+    <style>
+        * {
+            color: black;
+        }
+    </style>
+    <script defer src="/windows-8/apps/settings.js"></script>
+    <script defer src="/windows-8/appBar.js"></script>
+    <script defer src="/windows-8/charms.js"></script>
+    <title>Jo Yu-ri (조유리) </title>
+</head>
+<body class="jo_yu-ri">
+    <div class="splash-screen">
+        <img src="/assets/icon/Jo Yu-ri (Beta).png" width="1000" height="1000"/>
+    </div>
+    <div id="charms-wrapper"></div>
+    <section>
+        <div class="header">
+            <h1>Jo Yu-ri</h1>
+            <div class="actions-button">
+
+            </div>
+        </div>
+        <div class="nav-pane">
+            <div class="nav-buttons">
+                <ul>
+                    <li><button id="about-tab" class="menuButton active" onclick="showTab('about')">나에 대해</button></li>
+                    <li><button id="yurigallery-tab" onclick="showTab('yurigallery')" class="menuButton">갱도</button></li>
+                    <li><button id="cta-tab" onclick="showTab('cta')" class="menuButton">CTA</button></li>
+                    <hr>
+                    <li><button id="about-app-tab" class="menuButton" onclick="showTab('about-app')">About this app</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pane-content">
+            <div id="about" class="nav-page active">
+                <h1>나에 대해</h1>
+                <div class="tab-buttons">
+                    <button class="tab-button active" id="kr-button" onclick="showPanel('kr')">Korean</button>
+                    <button class="tab-button" id="en-button" onclick="showPanel('en')">English</button>
+                </div>
+                <div class="panel-content active" id="kr">
+                    <h2>소개</h2>
+                    <p>안녕하세요, 여러분! <br>
+저는 조유리입니다. 저의 공식 Project Linear 앱에 오신 것을 환영해요! <br>
+이곳은 저의 이야기, 꿈, 그리고 여러분과의 소중한 인연을 나누는 공간이에요.</p>
+                    <div class="biography">
+                        <div><img src="/assets/special/jo yu-ri/jo_yu_ri-1.webp" width="400" height="auto" style="margin: 20px 0;"/></div>
+                        <div>
+                            <ul>
+                                <h2>About me...</h2>
+                                <li>🎂 생년월일: 2001년 10월 22일</li>
+                                <li>📍 출생지: 대한민국 부산광역시</li>
+                                <li>♎️ 별자리: 천칭자리 (Libra)</li>
+                                <li>✨ 알려진 이유: IZ*ONE 메인보컬, 솔로 가수, 그리고 배우</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h2>My career</h2>
+                    <div class="quote">
+                        처음 음악을 시작했을 때, 저는 단지 노래를 좋아하는 소녀였어요. <br>
+                        2018년, 저는 Mnet의 오디션 프로그램 프로듀스 48에 출연했고, 많은 분들의 응원 덕분에 IZ*ONE의 메인보컬로 데뷔하게 되었어요.
+                    </div>
+                    <div class="quote">
+                        IZ*ONE 활동 이후, 저는 솔로 가수로서 새로운 색깔을 보여드리기 시작했어요. <br>
+                        2021년에는 첫 번째 솔로 앨범 GLASSY를 발매하며 저만의 음악 세계를 펼쳤고, 그 이후로 Love Shhh!, Taxi, Bubbly 같은 곡들로 활동했어요.
+                    </div>
+                    <div class="quote">
+                        그리고 이제는 연기에도 도전하고 있어요! <br>
+                        드라마 *"Mimicus"*와 *"가우스전자 (Gaus Electronics)"*를 통해 여러분께 또 다른 모습을 보여드릴 수 있었고,
+                        최근에는 *"청춘월담 (The Story of Youth)"*에서 더욱 깊어진 감정을 연기하게 되어 무척 기뻤어요.
+                    </div>
+                    <div class="quote">
+                        음악과 연기, 두 가지 모두를 사랑하는 제가 <br>
+                        앞으로도 더욱 성장하고 도전하는 모습을 보여드릴게요! <br>
+                        언제나 곁에서 응원해 주셔서 감사합니다. 💕
+                    </div>
+                </div>
+                <div class="panel-content" id="en">
+                    <h2>Introduction</h2>
+                    <p>Hi, everyone! <br>
+                    I'm Jo Yu-ri, and welcome to my official Project Linear app! <br>
+                    Here, I'll share my journey, my dreams, and everything special between me and you.</p>
+                    <div class="biography">
+                        <div><img src="/assets/special/jo yu-ri/jo_yu_ri-1.webp" width="400" height="auto" style="margin: 20px 0;"/></div>
+                        <div>
+                            <ul>
+                                <h2>About me...</h2>
+                                <li>🎂 Birthday: October 22, 2001</li>
+                                <li>📍 Birthplace: Busan, South Korea</li>
+                                <li>♎️ Zodiac Sign: Libra</li>
+                                <li>✨ Known for: Main vocalist of IZ*ONE, solo singer, and actress</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2>My career</h2>
+                    <div class="quote">
+                        When I first started music, I was just a girl who loved to sing. <br>
+                        In 2018, I appeared on Mnet’s survival show Produce 48, and thanks to your love, I debuted as the main vocalist of IZ*ONE.
+                    </div>
+                    <div class="quote">
+                        After IZ*ONE disbanded, I began my solo career to explore and express my unique musical identity. <br>
+                        In 2021, I released my first solo album GLASSY, and followed up with tracks like Love Shhh!, Taxi, and Bubbly.
+                    </div>
+                    <div class="quote">
+                        I’ve also stepped into the world of acting! <br>
+                        Through dramas like Mimicus and Gaus Electronics, I got to show you a new side of me,
+                        and more recently, I appeared in The Story of Youth (청춘월담) where I took on a deeper emotional role.
+                    </div>
+                    <div class="quote">
+                        I truly love both music and acting, and I promise to keep growing and challenging myself in both. <br>
+                        Thank you for always supporting me. Let’s keep walking this journey together! 💕
+                    </div>
+
+                </div>
+            </div>
+            <div class="nav-page" id="yurigallery">
+                <h1>갱도</h1>
+                <div class="loading">
+                    <img src="/assets/icon/windows-8-loader-normal.gif" id="user-pic" width="35" height="35" />
+                </div>
+                <div class="show hidden">
+                    <div class="gallery" id="gallery">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="nav-page" id="cta">
+                <h1>CTA</h1>
+            </div>
+            <div class="nav-page" id="about-app" style="font-size: 30px;">
+                <h1>이 앱 정보</h1>
+                <img src="/assets/icon/Jo Yu-ri (Beta).png" width="800" height="500" style="object-fit: cover;" />
+                <h1 style="font-size: 40px; margin: 0 0 0 0; "> <b style="font-weight: 500;">Jo Yu-ri</b></h1> <br>
+                <span> <span data-lang="version">App version</span>:<b> jo_yu-ri-v1.1-beta</b> </span> <br>
+                <span> <span data-lang="version">OS version</span>:<b> replOS_win_8-v0.07.0.alpha_special-jo_yu-ri</b> </span> <br>
+                <span> <span data-lang="revision_date">Revision date</span><b>: 1-Aug-2025</b> <br> </span>
+                <span> Copyright© 2025 Yuuki Conan. <b data-lang="rights">All rights reserved.</b> </span> <br> <br> <span class="warning"> Expiration date: 11-Sep-2025 00:00 GMT. <br> <br>
+                    <p style="font-size: 33px; color: rgb(199, 86, 86) !important;;" class="warning">Unauthorized use or disclosure in any manner may result in disciplinary action up to and including termination of employment, and potential civil and criminal liability.</p> <br> <br>
+                    <button class="btn">Check updates</button>
+                <h2>Changes:</h2>
+                <ol>
+                    <li>The initial release of Jo Yu-ri's app.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <div class="taskbar">
+        <button class="btn start-button"><i class="uil uil-windows"></i></button>
+    </div>
+    <div class="contextmenu" id="ctxmenu">
+        <ul>
+            <li>
+                <button class="menuButton sub">Change tile size</button>
+                <ul class="submenu">
+                    <li><button class="menuButton" id="largeTile">Large</button></li>
+                    <li><button class="menuButton" id="normalTile">Medium</button></li>
+                    <li><button class="menuButton" id="wideTile">Wide</button></li>
+                    <li><button class="menuButton" id="smallTile">Small</button></li>
+                </ul>
+            </li>
+            <li><button class="menuButton sub">Rate this app</button></li>
+        </ul>
+    </div>
+</body>
+</html>

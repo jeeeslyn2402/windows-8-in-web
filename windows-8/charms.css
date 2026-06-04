@@ -1,0 +1,561 @@
+.charms {
+    position: absolute;
+    right: 0 !important;
+    top: 0; bottom: 0;
+    z-index: 99;
+    display: none;
+    min-width: 160px;
+    max-width: 200px;
+    height: 250vh;
+    transition: all .3s;
+}
+
+.charms.visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn .3s;
+}
+
+.charms.hovered {
+    background-color: black;
+}
+
+.charms.hovered .charms-system-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.charms.charms.hovered .btn span {
+    visibility: visible;
+}
+
+.charms.hovered .btn {
+    color: white;
+}
+
+.charms .btn {
+    width: 160px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    animation: fadeInLeft2 .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: transparent !important;
+    padding: 10px 10px 18px 10px;
+}
+.charms .btn span {
+    position: relative;
+    font-family: 'Segoe UI';
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.8rem;
+    top: -10px;
+    visibility: hidden;
+}
+
+.charms-btns > :nth-child(1) {
+    animation-duration: .3s;
+}
+.charms-btns > :nth-child(2) {
+    animation-duration: .4s;
+}
+
+.charms .btn .icon, .charms .btn img {
+    width: 90px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-style: normal !important;
+    font-family: 'Segoe UI Symbol' !important;
+    font-size: 5rem !important; /* for icons */
+}
+
+.icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    top: -17px;
+}
+
+.search-button::before {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    content: '\E11A';
+}
+
+.settings-button:before {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    content: '\E115';
+}
+
+.mail-button::before {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    content: '\E205';
+}
+
+.sound-icon:before {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    content: '\E15D';
+}
+
+.brightness-icon:before {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    content: '\E284';
+}
+
+.keyboard-icon:before {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    content: '\E144';
+}
+
+.power-icon:before {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    content: '\E07D';
+}
+
+.share-button:before {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    content: attr(data-icon);
+}
+
+.windows-icon::before {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+}
+
+.signal-full-icon::before {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    content: '\E1E9';
+}
+
+.people-button::before {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    content: '\E125';
+}
+
+
+.globe-button::before {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    content: '\E128';
+    
+}
+
+.charms .btn .windows-icon i {
+    color: var(--primary-color) !important;
+    font-family: sans-serif;
+}
+
+.charms-system-panel {
+    position: fixed;
+    left: 4%;
+    bottom: 10%;
+    padding: 20px 40px;
+    background-color: black;
+    height: 180px;
+    display: none;
+    gap: 3em;
+}
+
+.charms-system-tray .icon, .charms-system-tray img {
+    width: 70px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: 'Segoe UI Symbol' !important;
+    position: relative;
+    left: 20px;
+    font-style: normal;
+}
+
+.charms-date-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.charms-date {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: -5px;
+    text-align: left;
+}
+
+#clock {
+    font-size: 7rem;
+    position: relative;
+    top: -10px;
+}
+
+.charms-date * {
+    font-size: 3rem;
+}
+
+.charms-date h1 {
+    margin: 0 !important;
+}
+
+.charms-system-panel * {
+    color: white;
+}
+
+
+.btn {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 6px 12px;
+    font-size: 15px;
+    transition: .1s;
+    margin-bottom: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    gap: 8px;
+    min-width: 50px;
+    min-height: 50px;
+    user-select: none;
+}
+
+.btn:has(i[class='uil uil-instagram']) {
+    background: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7) !important;
+    border-color: #ee2a7b !important;
+    color: white;
+}
+.btn:has(img[src='/icon/twitterx-white.png']) {
+    background: linear-gradient(160deg, black, black, #2888d7) !important;
+    border-color: #303030 !important;
+    color: white;
+}
+.btn:has(i[class='uil uil-facebook']) {
+    background: blue;
+    color: white;
+}
+.btn:has(i[class='uil uil-github']) {
+    background: black !important;
+    color: white;
+}
+.btn i {
+    color: white;
+    font-size: 1.7rem;
+}
+
+.btn i:only-child {
+    gap: 0;
+    margin: 0;
+}
+
+.btn img {
+    width: 20px; height: 20px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0; right: 0; bottom: 0;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 88;
+    display: none;
+}
+
+.overlay.visible {
+    display: block;
+}
+
+.sidebar {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0; bottom: 0;
+    background-color: var(--secondary-color);
+    width: 880px;
+    padding: 40px 0px;
+    z-index: 101;
+}
+
+.sidebar.visible {
+    display: block;
+} 
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.sidebar h1 {
+    position: relative;
+    left: 2.5cm;
+    animation: fadeInLeft2 .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: white;
+    font-size: 4rem;
+}
+
+.search-box {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0px 30px 0 6em;
+}
+
+#search-btn-alt {
+    width: 80px;
+    position: relative;
+    right: 2.1cm;
+    top: 3px;
+    height: 73px;
+    background-color: var(--secondary-color);
+}
+
+#search-btn-alt::before {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform: scale(4);
+    font-family: 'Segoe UI Symbol';
+    filter: invert();
+    top: 3.8cm;
+    right: -16px;
+    content: '\E11A';
+}
+
+.content {
+    margin: 0em auto;
+    padding: 0;
+}
+
+.content > :nth-child(1) {
+    animation-duration: .6s;
+}
+
+.content > :nth-child(2) {
+    animation-duration: .8s;
+}
+
+.content > :nth-child(3) {
+    animation-duration: 1s;
+}
+
+.menu-button {
+    left: -20px;
+    padding: 2.4em 6em 2.4em 6em;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    align-items: center;
+    font-weight: 400;
+    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+    animation: fadeInLeft2 .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menu-button i {
+    font-size: 50px;
+}
+
+.menu-button span {
+    font-size: 38px;
+    position: relative;
+    font-weight: 300;
+    top: -4px;
+    color: white !important;
+}
+
+.menu-button.disabled i {
+    color: #808080 !important;
+}
+
+.menu-button.disabled:hover {
+    background-color: transparent;
+}
+
+.app-logo-container {
+    display: inline;
+    background-color: rgba(58, 58, 58, 0.123);
+    width: 120px; height: 120px;
+    display: flex;
+    justify-content: center; align-items: center;
+}
+
+.app-logo {
+    width: 100px; height: 100px;
+    object-fit: cover;
+}
+
+.menu-button:hover {
+    background-color: rgba(58, 58, 58, 0.1);
+}
+
+.action-center {
+    position: absolute;
+    bottom: -170vh !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 90px;
+    padding-top: 30px;
+    gap: 20px 40px;
+    border-top: 2px solid rgba(58, 58, 58, 0.2);
+}
+
+.action-center .menu-button {
+    width: 30px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.page-settings {
+    position: relative;
+    
+}
+
+.action-center a {
+    text-align: right !important;
+    font-size: 40px;
+    width: 100%;
+    padding: 50px 40px;
+}
+
+.menu-button i, .back-btn i {
+    font-style: normal;
+    font-family: 'Segoe UI Symbol' !important;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 3.5rem !important;
+}
+
+.index {
+    display: none;
+    position: relative;
+    animation: fadeInLeft .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.index.active {
+    display: block;
+}
+
+.back-btn, .back-btn i {
+    font-size: 4rem !important;
+    background-color: transparent !important;
+}
+
+.back-btn:hover {
+    border-radius: 50px;
+}
+
+.back-icon::before {
+    position: absolute;
+    width: 140px;
+    height: 60px;
+    
+    content: '\E2A4';
+}
+
+.pane-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0px;
+    margin: 0 4em;
+    animation: fadeInLeft .9s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.pane-header h1 {
+    position: relative;
+    left: 35px;
+    top: 10px;
+}
+
+#img-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 4em;
+}
+
+.image-box {
+    width: 130px;
+    height: 130px;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+.index-1 .content {
+    background-color: white !important;
+    height: 250vh;
+    padding-top: 1px;
+}
+
+.index-1 .content h2 {
+    position: relative;
+    left: 1em;
+    color: inherit;
+}
+
+.index-0 .content h2 {
+    top: 0px;
+    left: 2.4em;
+    color: rgba(221, 221, 221, 0.5);
+    font-size: 38px;
+    animation: fadeInLeft2 .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.index-0 .content {
+    position: relative;
+    top: 5px;
+}
+
+
+body.dark-mode .index-1 .content {
+    background-color: #202020 !important;
+}

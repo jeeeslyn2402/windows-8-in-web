@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="YuukiC">
+    <meta name="description" content="Project Linear gives you to bring back Windows 8.1 Metro style with modern features.">
+    <meta property="og:title" content="Project Linear" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://project-linear.com"/>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css?display=swap" />
+    <link rel="stylesheet" href="/windows-8/charms.css">
+    <link rel="stylesheet" href="/windows-8/start_styles.css">
+    <link rel="stylesheet" href="./apps_template_styles.css">
+    <style>
+        * {
+            color: black;
+        }
+    </style>
+    <script defer src="./settings.js"></script>
+    <script defer src="/windows-8/appBar.js"></script>
+    <script defer src="/windows-8/charms.js"></script>
+    <title>PC settings</title>
+</head>
+<body>
+    <div class="splash-screen">
+        <i class="icon settings-button"></i>
+    </div>
+    <div id="charms-wrapper"></div>
+    <section>
+        <div class="header">
+            <h1>PC settings</h1>
+            <div class="actions-button">
+
+            </div>
+        </div>
+        <div class="nav-pane">
+            <div class="nav-buttons">
+                <ul>
+                    <li><button id="personalize-tab" class="menuButton active" onclick="showTab('personalize')">Personalize</button></li>
+                    <li><button id="users-tab" onclick="showTab('users')" class="menuButton">Users</button></li>
+                    <li><button id="system-tab" onclick="showTab('system')" class="menuButton">System</button></li>
+                    <li><button id="wu-tab" class="menuButton" onclick="showTab('wu')">Windows Update</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pane-content">
+            <div id="personalize" class="nav-page active">
+                <div class="tab-buttons">
+                    <button class="tab-button" id="bg-button" onclick="showPanel('bg')">Background</button>
+                    <button class="tab-button active" id="ls-button" onclick="showPanel('ls')">Lock screen</button>
+                    <button class="tab-button" id="ss-button" onclick="showPanel('ss')">Start screen</button>
+                    <button class="tab-button" id="ap-button" onclick="showPanel('ap')">Account picture</button>
+                </div>
+                <div class="panel-content" id="bg">
+                    <div class="current-image">
+                        <img src="/assets/start-background/default.png" class="current-bg" alt="Current background.">
+                    </div>
+                    <button class="btn">Change background</button>
+                    <h2>Link</h2>
+                </div>
+                <div class="panel-content active" id="ls">
+                    <div class="current-image">
+                        <img src="/assets/lockscreen/win8-ls1.png" class="current-bg" alt="Current background.">
+                        <div class="overlay-clock">
+                            <h1 id="lockscreen-clock">12:00</h1>
+                            <p id="lockscreen-date">Monday, January 1</p>
+                        </div>
+                    </div>
+                    <button class="btn">Change background</button>
+                    <h2>Lock screen apps</h2>
+                    <p>Choose apps to run in the background and show quick status and notifications, even when your screen is locked.</p>
+                    <div class="flex-grid normal">
+                        <div class="modern-cards custom smalltile no-anim">
+                            <div class="img">
+                                
+                            </div>
+                            <div class="top-text">
+                                <div class="dev-name">Hello</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                    </div>
+                </div>
+                <div class="panel-content" id="ss">
+                    <p>This page is coming soon!</p>
+                </div>
+                <div class="panel-content" id="ap">
+                    <p>This page is coming soon!</p>
+                </div>
+            </div>
+            <div class="nav-page" id="users">
+                <h1>Users</h1>
+                <div class="loading">
+                    <img src="/assets/icon/windows-8-loader-normal.gif" id="user-pic" width="35" height="35" />
+                </div>
+                <div class="show hidden">
+                    <img src="/assets/icon/windows8_account_picture.png" id="user-pic" width="500" height="500" />
+                    <h2>User</h2>
+                    <h3 id="privilege" style="text-transform: uppercase;">Administrator</h3>
+                    <button class="btn">Change profile picture</button>
+                </div>
+            </div>
+            <div class="nav-page" id="system">
+                <h1>System</h1>
+                <h2>Accessibility</h2>
+                <ul class="features-list">
+                    <li>
+                        <div>
+                            <span class="label">Enable dark mode (experimental)</span>
+                            <label class="toggle">
+                                <input type="checkbox" id="darkModeToggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="label">Disable animation</span>
+                            <label class="toggle">
+                                <input type="checkbox" id="disableAnim">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-page" id="wu" style="font-size: 30px;">
+                <h1>Windows Update</h1>
+                <h2>About</h2>
+                <img src="/assets/icon/replOS Alpha.png" width="800" height="300" style="object-fit: cover;" />
+                <h1 style="font-size: 40px; margin: 0 0 0 0; "> <b style="font-weight: 500;">replOS Alpha</b></h1> <br>
+                <span> <span data-lang="version">Version</span>:<b> replOS_win_8-v0.07.0.alpha</b> </span> <br>
+                <span> <span data-lang="revision_date">Revision date</span><b>: 1-Aug-2025</b> <br> </span>
+                <span> Copyright© 2025 Yuuki Conan. <b data-lang="rights">All rights reserved.</b> </span> <br> <br> <span class="warning"> Expiration date: 11-Sep-2025 00:00 GMT. (<span class="remainingTime"></span> days left)</span>  <br> <br>
+                    <p style="font-size: 36px; color: rgb(199, 86, 86) !important;;" class="warning">Unauthorized use or disclosure in any manner may result in disciplinary action up to and including termination of employment, and potential civil and criminal liability.</p> <br> <br>
+                    <button class="btn">Check updates</button>
+                <h2>Changes:</h2>
+                <ol>
+                    <li>(New!) You can rename tile groups by clicking the header text above the tiles.</li>
+                    <li>(New!) Settings Charms is more functional.</li>
+                    <li>(New!) The "Apps" page has been implemented again after it was disabled in Alpha 0.2.</li>
+                    <li>(New!) SSD mode, allows users to boot to the Start Screen quickly (by default when users visit this site, it will show a boot screen first).</li>
+                    <li>(New!) Jo Yu-ri, a Squid Game's actress that cast as Kim Jun-hee.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <div class="taskbar">
+        <button class="btn start-button"><i class="uil uil-windows"></i></button>
+    </div>
+    <div class="contextmenu" id="ctxmenu">
+        <ul>
+            <li>
+                <button class="menuButton sub">Change tile size</button>
+                <ul class="submenu">
+                    <li><button class="menuButton" id="largeTile">Large</button></li>
+                    <li><button class="menuButton" id="normalTile">Medium</button></li>
+                    <li><button class="menuButton" id="wideTile">Wide</button></li>
+                    <li><button class="menuButton" id="smallTile">Small</button></li>
+                </ul>
+            </li>
+            <li><button class="menuButton sub">Rate this app</button></li>
+        </ul>
+    </div>
+</body>
+</html>

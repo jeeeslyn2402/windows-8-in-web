@@ -1,0 +1,38 @@
+body, html {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: black;
+    overflow: hidden;
+    font-family: 'Segoe UI Light', system-ui;
+}
+
+* {
+    color: white;
+}
+
+.boot-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.boot-logo {
+    margin: 0em 3em 0em 3em;
+    height: 76vh;
+}
+
+.boot-logo img {
+    width: 110px; height: 110px; object-fit: cover;
+    position: relative; top: 4.7cm;
+}
+
+.boot-text {
+    font-size: 22px;
+}
+
+.windows-loader {
+    filter: invert();
+    display: none;
+    width: 30px; height: 30px;
+}

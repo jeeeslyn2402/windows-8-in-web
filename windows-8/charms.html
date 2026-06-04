@@ -1,0 +1,68 @@
+<div class="charms-container">
+    <div class="charms">
+        <script defer src="./header.js"></script>
+        <div class="charms-btns">
+            <button class="btn" id="search"><i class="icon search-button"></i><span>Search</span></button>
+            <button class="btn start-button" id="start"><i class="icon windows-icon uil uil-windows"></i><span>Start</span></button>
+            <button class="btn" id="settings"><i class="icon settings-button"></i><span>Settings</span></button>
+        </div>
+        <div class="charms-system-panel">
+            <div class="charms-system-tray">
+                <i class="icon signal-full-icon"></i>
+            </div>
+            <div class="charms-date-container">
+                <div class="charms-clock">
+                    <h1 id="clock"></h1>
+                </div>
+                <div class="charms-date">
+                    <h1 class="charms-day" id="chday"></h1>
+                    <h1 class="charms-month" id="chdate"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay"></div>
+<div class="sidebar">
+    <div class="page page-search">
+        <h1>Search</h1>
+        <div class="search-box">
+            <input type="search" name="Search Content" id="searchcontent" placeholder="Search apps">
+            <button id="search-btn-alt"></button>
+        </div>
+        <div class="content">
+            <br />
+            <div class="menu-button">
+                <div class="app-logo-container"><img src="/assets/icon/AI_Rara_New_Logo_20242025__simple.png" class="app-logo"></div>
+                <span>AI Rara</span>
+            </div>
+        </div>
+    </div>
+    <div class="page page-settings">
+        <div class="index index-0 active" data-target="index0">
+            <h1>Settings</h1>
+            <div class="content">
+                <h2 id="app-title">Start</h2>
+                <div class="menu-button"  data-target="index1"><span>Personalize</span></div>
+                <div class="menu-button"><span>Tiles</span></div>
+            </div>
+            <div class="action-center">
+                <div class="menu-button"><i class="sound-icon"></i><span>Volume</span></div>
+                <div class="menu-button disabled"><i class="brightness-icon"></i><span>Unavailable</span></div>
+                <div class="menu-button"><i class="power-icon"></i><span>Power</span></div>
+                <div class="menu-button"><i class="keyboard-icon"></i><span>Keyboard</span></div>
+                <a href="/windows-8/apps/ms-settings.html">Change PC settings</a>
+            </div>
+        </div>
+        <div class="index index-1" data-target="index1">
+            <div class="pane-header">
+                <button class="btn back-btn"><i class="back-icon"></i></button>
+                <h1>Personalize</h1>
+            </div>
+            <div class="content">
+                <h2>Background</h2>
+                <div id="img-container"></div>
+            </div>
+        </div>
+    </div>
+</div>

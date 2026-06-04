@@ -1,0 +1,661 @@
+::-webkit-scrollbar-track {
+    background-color: #e0e0e0;
+}
+
+body, html {
+    background-image: none !important;
+    background-color: #f8f8f8 !important;
+    width: 250%;
+}
+
+section {
+    display: none;
+}
+
+.splash-screen {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--primary-color);
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform-style: preserve-3d;
+    will-change: transform;
+    animation: tilting 1.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    backface-visibility: hidden;
+}
+
+@keyframes tilting {
+    from {
+        transform: rotateY(-180deg);
+    } to {
+        transform: rotateY(0deg);
+    }
+}
+
+
+.splash-screen i {
+    font-family: 'Segoe UI Symbol' !important;
+    font-size: 280px;
+    position: absolute;
+    top: 38%;
+    left: 46%;
+    transform: translate(-35%, -50%);
+    font-style: normal;
+}
+
+.tab-button.active {
+    color: var(--primary-color) !important;
+}
+
+.warning {
+    color: rgb(199, 86, 86) !important;
+}
+
+.nav-pane {
+    position: fixed;
+    left: 0; top: 0; bottom: 0; background-color: #eeeeee;
+    padding: 14px 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+
+.header h1 {
+    color: var(--primary-color) !important;
+    margin: 50px 0;
+    top: 0;
+    left: -12px;
+}
+
+.header {
+    z-index: 3;
+    top: 20px !important;
+    width: 22.5%;
+    padding-bottom: 0px;
+}
+
+.header.metroing {
+    background-color: rgba(209, 84, 0, 0.2);
+    left: 0; right: 0; top: 0 !important;
+}
+
+.header.metroing h1 {
+    font-weight: 400;
+    left: 2.5em;
+    top: -10px;
+}
+
+.header.metroing .actions-button {
+    top: 0px;
+}
+
+.header.metroing .actions-button span {
+    color: black !important;
+    font-family: 'Segoe UI Symbol' !important;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 4em;
+    margin: 0;
+    filter: brightness(0.8)
+}
+
+.nav-pane ul {
+    list-style: none; padding: 0; margin: 0;
+}
+
+.nav-pane li {
+    margin-bottom: 0px;
+}
+
+.nav-pane * {
+    font-size: 50px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.menuButton {
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding: 22px 36px 26px 4cm;
+    transition: .2s;
+    text-align: left;
+    width: 100%;
+    font-weight: 300;
+    z-index: 5;
+}
+
+.menuButton:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.menuButton.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.nav-buttons {
+    margin-top: 19%;
+    margin-bottom: 0;
+    width: 60rem !important;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.pane-content {
+    position: absolute;
+    left: 60rem;
+    bottom: 0;
+    top: 0; right: 0;
+    overflow-x: hidden;
+    width: 71%;
+}
+
+.pane-content * {
+    color: black !important;
+
+}
+
+.nav-page {
+    padding: 30px 3cm;
+    display: none;
+    animation: fadeInLeft .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav-page.active, .panel-content.active {
+    display: block;
+}
+
+.panel-content {
+    background-color: transparent;
+    margin: 52px 10px;
+    display: none;
+    animation: fadeInLeft .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.features-list * {
+    font-size: 2.5rem;
+    list-style: none;
+}
+
+.features-list li div {
+    margin: 0 20px 0 20px;
+    padding: 20px 0px;
+    width: 100%;
+    position: relative;
+    left: -1.4em;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.features-list .label {
+    margin: 0; padding: 0;
+    position: relative;
+}
+
+.current-image {
+    position: relative;
+    width: 100%;
+    height: 780px;
+}
+
+.overlay-clock {
+    position: absolute;
+    bottom: 4cm; left: 3.2cm;
+    margin: 0;
+}
+
+.overlay-clock * {
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    margin: 0px;
+    font-weight: 300;
+}
+
+.overlay-clock h1 {
+    font-size: 8em;
+    font-weight: lighter;
+}
+.overlay-clock p {
+    font-size: 2.6em;
+}
+
+.current-bg {
+    width: 100%;
+    height: 768px;
+    object-fit: cover;
+}
+
+.gallery, #gallery {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.link {
+    border: none;
+}
+
+.gallery-item {
+    width: 500px; height: 500px; border: 1px solid gray; background-size: cover;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+}
+
+h2 {
+    left: 0;
+}
+
+body.dark-mode {
+    background-color: #202020 !important;
+}
+
+body.dark-mode .pane-content, body.dark-mode .flat-page {
+    background-color: #202020;
+    color: white !important;
+}
+
+body.dark-mode .pane-content * {
+    color: white !important;
+}
+
+
+.index {
+    display: none;
+    position: relative !important;
+    animation: fadeInLeft .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.index.active {
+    display: block;
+}
+
+
+.flex-grids {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 250vw !important;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    perspective: 2000px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateY(-25%);
+}
+.flex-grids::-webkit-scrollbar {
+    display: none;
+}
+.flex {
+    padding: 40px 60cm 20px 6cm;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    min-width: max-content !important;
+}
+@keyframes windows8Left {
+    from { transform: translateX(500px) } to { transform: translateX(0px) }
+}
+@keyframes glowCard {
+    50% { box-shadow: 0px 0px 30px rgba(124, 124, 124, 0.5); }
+}
+.caption-container {
+    background-color: #eeeeee;
+    width: 23em;
+    display: flex;
+    flex-direction: column;
+    font-size: 38px;
+    min-height: 600px;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    overflow: hidden;
+    will-change: transform;
+    margin-right: 2em;
+    transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+    box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.2) ;
+    isolation: isolate;
+    position: relative;
+    padding: 0.5em;
+    animation: windows8Left .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.caption-container.selected {
+    background-color: rgb(218, 162, 117);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5) ;
+    border: 1px solid rgba(100, 100, 100, 0.2);
+    animation: windows8Left .5s cubic-bezier(0.075, 0.82, 0.165, 1), glowCard 3s infinite !important;
+    padding: 1em;
+    z-index: 999;
+}
+body.dark-mode .caption-container.selected {
+    background-color: rgba(214, 131, 75, 0.795);
+}
+.caption-container.selected .caption-title {
+    color: rgba(110, 110, 110, 0.952);
+}
+body.dark-mode .caption-container.selected .caption-title {
+    color: rgba(190, 187, 187, 0.952);
+}
+.caption-container .caption {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.caption .caption-title {
+    display: block;
+    margin-bottom: 0px;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0px 0px 2px #808080;
+    color: rgba(92, 92, 92, 0.507);
+}
+.caption .caption-desc {
+    display: none;
+    font-size: 32px;
+    transition: all .4s;
+}
+.caption-container.selected .caption .caption-desc {
+    display: block;
+}
+body.dark-mode .caption-container {
+    background-color: #303030;
+}
+.flex > :nth-child(1) {
+    animation-duration: .6s;
+}
+.flex > :nth-child(2) {
+    animation-duration: .9s;
+}
+.flex > :nth-child(3) {
+    animation-duration: 1.2s;
+}
+.flex > :nth-child(4) {
+    animation-duration: 1.5s;
+}
+.caption-container .img .icon {
+    font-size: 6rem;
+    width: 120px;
+    height: 90px;
+}
+.caption-container .img {
+    background-color: rgba(102, 102, 102, 0.034);
+    width: 100%;
+    height: 530px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 70px;
+    overflow: hidden;
+    position: relative;
+}
+.caption-container .caption {
+    margin: 0px 20px;
+    padding: 10px 10px 14px 10px;
+}
+.caption-container .img img {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.awards {
+    background-color: gold !important;
+    color: black;
+}
+
+
+.header .actions-button .search-icon {
+    color: black !important;
+}
+
+
+@keyframes windows8ScaleIn {
+    from {
+        transform: scale(0.7) translateX(200px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.footer-link {
+    position: absolute;
+    right: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0.6em;
+    left: 3em;
+    text-transform: none;
+    font-weight: 300;
+    padding: 3em 6em;
+}
+
+.footer p {
+    font-size: 32px;
+}
+
+body.dark-mode .footer p {
+    color: #aaa !important;
+}
+
+.footer-link .tab-buttons {
+    top: 0;
+    gap: 30px;
+}
+
+.footer-link .tab-button span {
+    font-size: 4rem;
+    position: relative;
+    top: -5px;
+}
+
+.footer-link .tab-button {
+    min-width: fit-content;
+    padding: 0 auto 0 auto;
+}
+
+.link, .footer-link .tab-button, body.dark-mode .link, body.dark-mode .footer-link .tab-button {
+    color: #555555 !important;
+    
+}
+
+.footer-link .tab-button.active, .link.active, body.dark-mode .footer-link .tab-button.active, body.dark-mode .link.active {
+    color: var(--primary-color) !important;
+}
+
+.link.disabled {
+    color: #404040 !important;
+    cursor: default;
+}
+
+.icon {
+    font-family: 'Segoe UI Symbol' !important;
+    font-style: normal;
+}
+
+.flat-page {
+    position: relative;
+    margin-top: 2.5%;
+    padding: 20px 1.7%;
+    width: 250vw !important;
+    height: 250vh !important;
+    animation: fadeInLeft .9s cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: none;
+}
+
+.flat-page p {
+    font-size: 35px;
+}
+
+.flat-page.active {
+    display: block;
+}
+
+.product-name {
+    font-weight: 600;
+}
+
+.sub-desc {
+    font-size: 34px;
+}
+
+/* Global class (applied to all apps) */
+.richi .header, .keke .header {
+    width: 232vw;
+}
+
+.homepage {
+    display: none;
+}
+
+.password {
+    display: inline;
+}
+
+/* Only applied in Jessica Noleen's apps */
+
+.jessica_noleen .splash-screen, .jessica_noleen .nav-pane .menuButton.active {
+    background-color: rgb(105, 76, 32) !important;
+}
+.jessica_noleen .header.metroing {
+    background-color: rgba(207, 207, 207, 0.192) !important;
+}
+.jessica_noleen .caption-container.selected{
+    background-color: rgba(129, 91, 33, 0.616) !important;
+}
+.jessica_noleen .flex-grids {
+    top: 32%;
+}
+
+.jessica_noleen .header h1, .jessica_noleen .tab-button.active, .jessica_noleen 
+.link.active, body.dark-mode .footer-link .tab-button.active, body.dark-mode .link.active {
+    color: rgb(146, 103, 39) !important;
+}
+
+.jessica_noleen .header {
+    width: 232vw;
+}
+
+/* Only applied in Richi's apps */
+.richi, .root {
+    background-color: none !important;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(180, 85, 6, 0.1)) !important;
+}
+body.dark-mode .richi, body.dark-mode .root {
+    background-image: linear-gradient(to top, rgba(70, 70, 70, 0.1), rgba(180, 85, 6, 0.1)) !important;
+}
+.richi .splash-screen, .richi .nav-pane .menuButton.active {
+    background-color:rgb(180, 85, 6) !important;
+}
+.richi .flex-grids {
+    perspective: 1000px;
+}
+
+.richi .header h1, .richi .tab-button.active, .richi 
+.link.active, body.dark-mode .footer-link .tab-button.active, body.dark-mode .link.active {
+    color:rgb(180, 85, 6) !important;
+}
+
+/* Only applied in Keke app */
+.keke, .root1 {
+    background-color: none !important;
+    background-image: linear-gradient(to top, rgb(22, 22, 22), rgb(5, 5, 5)) !important;
+    color: white !important;
+}
+body.dark-mode .keke, body.dark-mode .root1 {
+    background-image: linear-gradient(to top, rgba(65, 65, 65, 0.1), rgba(180, 85, 6, 0.1)) !important;
+}
+.keke .splash-screen, .keke .nav-pane .menuButton.active {
+    background-color:rgb(63, 63, 63) !important;
+}
+
+.keke .header h1, .keke .tab-button.active, .ke 
+.link.active, body.dark-mode .footer-link .tab-button.active, body.dark-mode .link.active {
+    color:rgb(168, 168, 168) !important;
+}
+
+.keke .flex-grids {
+    top: 25%
+}
+
+.keke .caption-container.selected {
+    background-color: rgba(87, 87, 87, 0.616) !important;
+}
+
+.mockuped {
+    position: absolute;
+    transform-style: preserve-3d;
+    bottom: -193px;
+    right: -10em;
+    width: 1000px; height: 1000px;
+    animation: fadeInLeft2 .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: rotate(-10deg) !important;
+}
+
+/* Only applied in Jo Yu-ri's apps */
+
+.jo_yu-ri .splash-screen, .jo_yu-ri .nav-pane .menuButton.active {
+    background-color: rgb(206, 99, 117) !important;
+}
+
+.jo_yu-ri .header h1, .jo_yu-ri .tab-button.active  {
+    color: rgb(206, 99, 117) !important; 
+}
+
+.jo_yu-ri hr {
+    border-color: rgb(206, 99, 117);
+}
+
+.biography {
+    background-color: rgba(92, 92, 92, 0.1);
+    border-radius: 0px;
+    padding: 20px 3em;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.biography ul li {
+    font-size: 2rem;
+    margin: 10px;
+    list-style: none;
+}
+
+#about p {
+    font-size: 33px;
+}
+
+.quote {
+    font-size: 2.2rem;
+    background-color: rgba(92, 92, 92, 0.1);
+    margin: 10px 0 20px 0;
+    padding: 20px 40px;
+    border-left: 1em solid rgb(206, 99, 117);
+}

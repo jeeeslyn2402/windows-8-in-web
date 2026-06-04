@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/windows-8/start_styles.css">
+    <link rel="stylesheet" href="/windows-8/oobe_styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
+    <script src="/windows-8/start.js"></script>
+    <script src="/windows-8/oobe_handler.js"></script>
+    <title> YC.com - Daftar </title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="body-content">
+        <section id="login">
+            <div class="login-container">
+                <div class="step step-0 active">
+                    <div class="heading"><h1> Let's finish setting up your device </h1></div>
+                    <div class="type">
+                        <span> Personalize </span>
+                        <span> Settings </span>
+                        <span> Privacy </span>
+                        <span> License Agreement </span>
+                    </div>                    
+                    <script>
+                        const heading = document.querySelector('.heading');
+                        const types = document.querySelectorAll('.type span');
+                        let called = false;
+
+                        setTimeout(() => {
+                            requestAnimationFrame(() => {
+                                heading.style.animation = 'fadeOutRight .3s cubic-bezier(0.075, 0.82, 0.165, 1)';
+                                
+                                for (const type of types) {
+                                    type.style.animation = 'fadeOutRight .3s cubic-bezier(0.075, 0.82, 0.165, 1)';
+                                    type.addEventListener('animationend', () => {
+                                        if (!called) {
+                                            called = true;
+                                            gotoStep(0);
+                                            heading.hidden = true;
+                                        }
+                                    })
+                                }
+                                
+                            })
+                        }, 5000)
+                    </script>
+                </div>
+                <div class="step step-1">
+                    <div id="login-header">
+                        <h1> Personalize </h1>
+                        <p> Add your beautiful name and profile picture here - you can change these settings later. </p>
+                    </div>
+                    <div class="login-panel">
+                        <form action="" autocomplete="on" method="post">
+                            <div class="login-content">
+                                <input type="text" class="form-textbox" id="username" maxlength="32" pattern="[]!#$%^&*()-=_+|\{}''<>?/~` " placeholder="Example: Mipmip" autocomplete="name" required>
+                                <label class="form-label" for="username"> First, what's your name?<sup style="color: red">*</sup> </label>
+                                <p class="error-msg" id="msgUser"> </p>
+                            </div>
+                            <div class="profile-pic">
+                                <h2> Add profile picture </h2>
+                                <img id="account-frame" src="" hidden>
+                                <img id="default-user" src="/assets/icon/windows8_account_picture.png">
+                                <br>
+                                <input type="file" id="fileInput" style="display: none;">
+                                <button class="btn bordered" type="button" id="btn-upload"> Change </button>
+                                <button class="btn bordered" type="button" id="btn-del"> Delete </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="buttons">
+                       <button class="btn bordered" type="button" style=" color: white;" onclick="gotoStep(1)"> Next </button>
+                        
+                    </div>
+                </div>
+                <div class="step step-2">
+                    <button id="back-button" onclick="backToStep(1)"><img src="icon/windows8_icons/Arrows/left_round1.png"></button>
+                    <div id="login-header">
+                        <h1> Keamanan </h1>
+                        <p> Kami tidak akan mengirim informasi pribadi untuk email ini dalam bentuk apapun. </p>
+                    </div>
+                    <div class="login-panel">
+                        <form action="" autocomplete="on" method="post">
+                            <div class="login-content">
+                                <input type="email" class="form-textbox" id="email" pattern="[]!#$%^&*()-=_+|\{}''<>?/~` " autocomplete="email" required>
+                                <label class="form-label" for="email"> Email: </label>
+                                <p class="error-msg" id="msgEmail"> </p>
+                            </div>
+                            <div class="login-content">
+                                <input type="password" class="form-textbox" id="password" autocomplete="new-password" required>
+                                <label class="form-label" for="password"> Kata sandi </label>
+                                <button class="small-buttons" id="show-password" type="button"> <i class="uil uil-eye" id="eye"> </i> </button>
+                                <p class="error-msg" id="msgPass"> </p>
+                            </div>
+                            <div class="login-content">
+                                <input type="password" class="form-textbox" id="confirm-password" autocomplete="new-password" required>
+                                <label class="form-label" for="confirm-password"> Konfirmasi kata sandi Anda </label>
+                                <button class="small-buttons" id="show-password" type="button"> <i class="uil uil-eye" id="eye"> </i> </button>
+                                <p class="error-msg" id="msgConfirmPass"> </p>
+                            </div>
+                            <div class="other-accounts">
+                                <p> Or: </p>
+                                <button class="small-buttons" type="button">
+                                    <i class="uil uil-google"></i>
+                                </button>
+                                <button class="small-buttons" type="button">
+                                    <i class="uil uil-microsoft"></i>
+                                </button>
+                                <button class="small-buttons" type="button">
+                                    <i class="uil uil-github"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn bordered" type="button" onclick="backToStep(1)"> Prev </button>
+                        <button class="btn bordered" type="button" style="background-color: #00aa00; color: white;" onclick="gotoStep(2)"> Next </button>
+                        
+                    </div>
+                </div>
+                <div class="step step-3">
+                    <button id="back-button" onclick="backToStep(1)"><img src="icon/windows8_icons/Arrows/left_round1.png"></button>
+                    <div id="login-header">
+                        <h1> Hai, <span id="get_username"></span>!</h1>
+                        <p> Baca dan setujui EULA dan Kebijakan Privasi YC.com sebelum membuat akun.  </p>
+                    </div>
+                    <div class="login-panel">
+                        <textarea id="license-text" readonly></textarea>
+                        <script type="text/javascript">
+                            let lic_textarea = document.getElementById('license-text');
+                            fetch('/README.txt')
+                                .then(response => {
+                                    if (!response.ok) {
+                                        throw new Error("Failed to fetch README.txt");
+                                    }
+
+                                    return response.text();
+                                })
+                                .then(data => {
+                                    lic_textarea.textContent = data;
+                                })
+                                .catch(error => console.error("Error fetching license on:", error));
+                                </script>
+                        <br>
+                        <input type="checkbox" id="cbx"> <label for="cbx">Saya menyetujui kebijakan ini dan bersedia untuk menggunakan layanan YC.com dengan baik.</label>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn bordered" type="button" onclick="backToStep(3)"> Prev </button>
+                        <button type="button" id="sign-up" class="btn bordered" style="color: white;" onclick="gotoStep(4)"> Sign up </button>
+                    </div>
+                </div>
+                <div class="step step-4" id="create">
+                    <div id="login-header">
+                        <h1> Membuat akun Anda... </h1>
+                        <p> Ini memerlukan waktu berdasarkan kecepatan koneksi Internet Anda. Harap bersabar. </p>
+                    </div>
+                    <div class="login-panel">
+                        <img src="/assets/icon/windows-8-loader-normal.gif" width="120" height="120" />
+                    </div>
+                </div>
+                <div class="step step-5" id="sign-up">
+                    <div id="login-header">
+                        <h1> Selesai! </h1>
+                        <p> Sebelum Anda pergi, lihat perubahan dan fitur baru yang sekarang tersedia di YC.com. </p>
+                    </div>
+                    <div class="login-panel">
+                        <form action="" method="post">
+                            <button type="submit" class="btn bordered" role="button"> Go to home </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

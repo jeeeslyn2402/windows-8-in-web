@@ -1,0 +1,42 @@
+body, html {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #202020 !important;
+    overflow: hidden;
+    font-family: 'Segoe UI Light', system-ui;
+    animation: fadeIn .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+*, h2 {
+    color: white !important;
+}
+
+.user-container, .welcome-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+.user-container {
+    position: absolute;
+    left: 30%;
+    top: 12%;
+    width: 600px;
+    align-items:start !important;
+    transform: translateX(-30%);
+}
+
+.user-column {
+    position: relative;
+    top: -50px;
+}
+
+.user-pic {
+    width: 350px !important; height: 350px !important;
+}
+
+.windows-loader {
+    filter: invert();
+    width: 60px; height: 60px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.3, maximum-scale=0.5">
+    <meta name="author" content="YuukiC">
+    <meta name="description" content="Official Website of YuukiC">
+    <meta property="og:title" content="YC.com - Be the next programmer" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.yc.com"/>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" crossorigin="anonymous"  rel="stylesheet">
+    <link rel="preload" href="../assets/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <link rel="preload" href="../assets/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css?display=swap" />
+    <link rel="stylesheet" href="./start_styles.css">
+    <script defer src="./start.js"></script>
+    <title>Start</title>
+    <script>
+        window.onload = () => {
+    const h1s = document.querySelectorAll('.header h1');
+    h1s.forEach(h1 => {
+        setTimeout(() => {
+            requestAnimationFrame(() => {
+                h1.classList.add('visible');
+                h1.style.animation = 'fadeInLeft .6s cubic-bezier(0.075, 0.82, 0.165, 1)';
+                h1.addEventListener('animationend', () => {
+                    h1.style.animation = ''
+                })
+            }, {once: true})
+        }, 800)
+    })
+}
+    </script>
+
+</head>
+<body>
+    <div class="card-overlay">
+        <div class="overlay-header">
+            <div></div>
+            <h1 id="devName"></h1>
+            <div class="actions">
+                <button class="btn">-</button>
+                <button class="btn close-btn">&times;</button>
+            </div>
+        </div>
+    </div>
+    <div class="charms">
+        
+        <div class="charms-system-panel">
+            <div class="charms-system-tray">
+                <i class="uil uil-battery-empty"></i>
+            </div>
+            <div class="charms-date-container">
+                <div class="charms-clock">
+                    <h1 id="clock"></h1>
+                </div>
+                <div class="charms-date">
+                    <h1 class="charms-day" id="chday"></h1>
+                    <h1 class="charms-month" id="chdate"></h1>
+                </div>
+            </div>
+            <script>
+                
+            </script>
+        </div>
+    </div>
+    <section class="about-me">
+        <div class="page apps active">
+            <div class="header">
+                <h1>Apps</h1>
+                <div></div>
+            </div>
+            
+        </div>
+    </section>
+</body>
+</html>
